@@ -1,89 +1,72 @@
 
-/* GLOBAL */
+/* ===== COMBINED EFFECTS PACK ===== */
+
+/* Page load smooth fade */
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #e5e7eb;
-  color: #111827;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  animation: pageFade 0.8s ease-in;
 }
 
-/* HEADER */
-header {
-  background: linear-gradient(135deg, #020617, #0f172a);
-  text-align: center;
-  padding: 80px 20px;
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-header h1 {
-  font-size: 42px;
-  font-weight: 700;
-  color: #38bdf8;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-size: 18px;
-  color: #e5e7eb;
-}
-
-.summary {
-  max-width: 720px;
-  margin: 15px auto 0;
-  color: #cbd5f5;
-}
-
-/* SECTIONS */
-section {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-/* HEADINGS */
-h2 {
-  font-size: 26px;
-  font-weight: 600;
-  color: #1d4ed8;
-  border-bottom: 3px solid #1d4ed8;
-  padding-bottom: 8px;
-  margin-bottom: 25px;
-}
-
-h3 {
-  font-size: 20px;
-  color: #0f172a;
-  margin-bottom: 8px;
-}
-
-/* CARD STYLE (used everywhere) */
+/* Card hover lift + glow */
 .card {
-  background-color: #ffffff;
-  border-left: 6px solid #38bdf8;
-  padding: 25px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
 }
 
-/* TEXT */
-p {
-  color: #374151;
-  font-size: 16px;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(56, 189, 248, 0.25);
+  background: linear-gradient(180deg, #ffffff, #f0f9ff);
 }
 
-ul {
-  padding-left: 20px;
+/* Section heading underline animation */
+h2 {
+  position: relative;
 }
 
-li {
-  margin-bottom: 10px;
-  color: #374151;
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  background-color: #38bdf8;
+  transition: width 0.4s ease;
 }
 
-/* CONTACT */
-#contact p {
-  font-weight: 500;
+section:hover h2::after {
+  width: 70px;
+}
+
+/* Skill grid hover highlight */
+.grid .card:hover {
+  border-left: 6px solid #0ea5e9;
+}
+
+/* Project title color pop */
+.project h3 {
+  transition: color 0.3s ease;
+}
+
+.project:hover h3 {
+  color: #1d4ed8;
+}
+
+/* Link smooth hover */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0ea5e9;
 }
