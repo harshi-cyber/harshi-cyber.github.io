@@ -94,18 +94,6 @@
       color: #d1d5db;
     }
 
-    .fade {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 1s ease forwards;
-    }
-
-    .fade.delay { animation-delay: 0.3s; }
-
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     a {
       color: #cbd5f5;
       text-decoration: none;
@@ -126,6 +114,12 @@
       padding: 12px 20px;
       border-radius: 10px;
       font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 25px rgba(0,229,255,0.6);
+      transform: translateY(-2px);
     }
 
     .btn-outline {
@@ -133,6 +127,11 @@
       color: #00e5ff;
       padding: 12px 20px;
       border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(0,229,255,0.1);
     }
 
     .contact p {
@@ -151,6 +150,18 @@
       color: #9ca3af;
       font-size: 14px;
     }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
@@ -159,7 +170,7 @@
 <div class="container">
 
   <!-- HOME -->
-  <section class="fade">
+  <section class="reveal">
     <h1>Hi, I’m Harshitha</h1>
     <p class="tagline">Entry-Level SOC Analyst | Cybersecurity Analyst</p>
 
@@ -178,7 +189,7 @@
   <div class="divider"></div>
 
   <!-- ABOUT -->
-  <section class="fade delay">
+  <section class="reveal">
     <h2>About Me</h2>
     <p>
       I’m a cybersecurity student transitioning from a non-IT background into
@@ -197,7 +208,7 @@
   <div class="divider"></div>
 
   <!-- SKILLS -->
-  <section class="fade">
+  <section class="reveal">
     <h2>Skills</h2>
     <div class="cards">
       <div class="card">
@@ -238,7 +249,7 @@
   <div class="divider"></div>
 
   <!-- PROJECTS -->
-  <section class="fade">
+  <section class="reveal">
     <h2>Projects</h2>
     <div class="cards">
       <div class="card">
@@ -272,7 +283,7 @@
   <div class="divider"></div>
 
   <!-- EDUCATION -->
-  <section class="fade">
+  <section class="reveal">
     <h2>Education</h2>
     <div class="card">
       <h3>BSc (Hons) Community Science</h3>
@@ -283,7 +294,7 @@
   <div class="divider"></div>
 
   <!-- CERTIFICATIONS -->
-  <section class="fade">
+  <section class="reveal">
     <h2>Certifications</h2>
     <div class="cards">
       <div class="card">Google Cybersecurity Certificate</div>
@@ -295,16 +306,16 @@
   <div class="divider"></div>
 
   <!-- CONTACT -->
-  <section class="fade contact" id="contact">
+  <section class="reveal contact" id="contact">
     <h2>Contact</h2>
     <p><i class="fas fa-envelope"></i>
-      <a href="mailto:harshithachenna01@gmail.com">harshithachenna01@gmail.com</a>
+      <a href="mailto:harshitha@gmail.com">harshitha@gmail.com</a>
     </p>
     <p><i class="fab fa-github"></i>
-      <a href="https://github.com/harshi-cyber" target="_blank">https://github.com/harshi-cyber</a>
+      <a href="https://harshii-cyber.github.io" target="_blank">harshii-cyber.github.io</a>
     </p>
     <p><i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/harshitha-chenna/" target="_blank">https://www.linkedin.com/in/harshitha-chenna/</a>
+      <a href="https://harshith.linkdln.com" target="_blank">harshith.linkdln.com</a>
     </p>
   </section>
 
@@ -313,6 +324,23 @@
 <footer>
   © 2026 Harshitha | SOC Analyst Portfolio
 </footer>
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    reveals.forEach(section => {
+      const windowHeight = window.innerHeight;
+      const elementTop = section.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) {
+        section.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
 
 </body>
 </html>
