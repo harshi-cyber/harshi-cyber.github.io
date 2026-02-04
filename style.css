@@ -1,3 +1,20 @@
+/* FIX TEXT VISIBILITY */
+section {
+  background-color: #f8fafc;
+  color: #0f172a;
+  padding: 40px 30px;
+  border-radius: 10px;
+}
+
+section p,
+section li {
+  color: #0f172a;
+}
+
+h2 {
+  color: #2563eb;
+  border-bottom: 2px solid #2563eb;
+}
 body {
   font-family: 'Inter', sans-serif;
   background-color:sky blue;
