@@ -180,3 +180,25 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* =========================
+   SCROLL-LIKE REVEAL ANIMATION
+========================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: revealAnim 0.9s ease forwards;
+}
+
+/* Stagger effect */
+.reveal:nth-child(1) { animation-delay: 0.1s; }
+.reveal:nth-child(2) { animation-delay: 0.2s; }
+.reveal:nth-child(3) { animation-delay: 0.3s; }
+.reveal:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes revealAnim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
