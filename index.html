@@ -9,89 +9,247 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Inter, sans-serif;
-      background: radial-gradient(circle at top, #0f1c2f, #0b0f1a 60%);
+      background: radial-gradient(circle at top, #0f1c2f 0%, #0b0f1a 65%);
       color: #e5e7eb;
+      scroll-behavior: smooth;
     }
+
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 80px 24px;
     }
-    h1, h2 {
+
+    h1, h2, h3 {
       font-family: Poppins, sans-serif;
+      letter-spacing: 0.4px;
     }
+
     h1 {
+      font-size: 48px;
       color: #00e5ff;
-      font-size: 42px;
+      margin-bottom: 10px;
     }
+
     h2 {
+      font-size: 28px;
       color: #7c7cff;
-      margin-top: 60px;
+      margin-top: 90px;
+      margin-bottom: 20px;
     }
+
     p {
       color: #cbd5f5;
-      line-height: 1.6;
+      line-height: 1.7;
+      max-width: 720px;
     }
+
+    .tagline {
+      font-size: 18px;
+      color: #9ca3af;
+      margin-bottom: 40px;
+    }
+
+    .divider {
+      margin-top: 90px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #1f2937, transparent);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
     .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid #1f2937;
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 20px;
+      padding: 26px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.18);
+    }
+
     ul {
       padding-left: 20px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #d1d5db;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .fade.delay {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact p {
+      margin: 6px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #9ca3af;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
+
   <div class="container">
 
-    <h1>Entry-Level SOC Analyst</h1>
-    <p>SIEM Monitoring • Alert Triage • Incident Investigation</p>
+    <!-- HERO -->
+    <section class="fade">
+      <h1>Entry-Level SOC Analyst</h1>
+      <p class="tagline">
+        SIEM Monitoring • Alert Triage • Incident Investigation
+      </p>
 
-    <h2>Professional Summary</h2>
-    <p>
-      Entry-level SOC Analyst with hands-on experience in SIEM monitoring,
-      alert triage, incident investigation, log analysis, phishing detection,
-      and incident documentation.
-    </p>
+      <p>
+        Entry-level SOC Analyst with hands-on experience in SIEM monitoring,
+        alert triage, incident investigation, log analysis, phishing detection,
+        and incident documentation. Comfortable working in a 24/7 SOC environment.
+      </p>
+    </section>
 
-    <h2>Skills</h2>
-    <div class="card">
-      <ul>
-        <li>SIEM Monitoring, Alert Triage, Incident Response</li>
-        <li>Wazuh, Microsoft Sentinel, Wireshark, Nmap</li>
-        <li>Nessus, VirusTotal, MXToolbox, WHOIS Lookup</li>
-        <li>Log Analysis, Phishing Analysis, MITRE ATT&CK</li>
-      </ul>
-    </div>
+    <div class="divider"></div>
 
-    <h2>Projects</h2>
-    <div class="card">
-      <strong>SOC Log Analysis – Splunk</strong>
-      <ul>
-        <li>Analyzed Windows, Linux, firewall, and web logs</li>
-        <li>Detected abnormal authentication behavior</li>
-      </ul>
-    </div>
+    <!-- SKILLS -->
+    <section class="fade delay">
+      <h2>Skills</h2>
 
-    <div class="card">
-      <strong>Phishing Email Analysis</strong>
-      <ul>
-        <li>SPF, DKIM, DMARC validation</li>
-        <li>IOC validation using VirusTotal</li>
-      </ul>
-    </div>
+      <div class="cards">
+        <div class="card">
+          <h3>SOC Operations</h3>
+          <ul>
+            <li>SIEM Monitoring</li>
+            <li>Alert Triage</li>
+            <li>Incident Response</li>
+            <li>SOC Playbooks</li>
+            <li>Ticketing & Documentation</li>
+          </ul>
+        </div>
 
-    <h2>Contact</h2>
-    <p>Email: harshitha@gmail.com</p>
-    <p>GitHub: harshii-cyber.github.io</p>
+        <div class="card">
+          <h3>Security Tools</h3>
+          <ul>
+            <li>Wazuh</li>
+            <li>Microsoft Sentinel</li>
+            <li>Wireshark</li>
+            <li>Nmap</li>
+            <li>Nessus</li>
+            <li>VirusTotal, MXToolbox</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Threat Detection</h3>
+          <ul>
+            <li>Log Analysis (Windows, Linux, Web)</li>
+            <li>Phishing Analysis</li>
+            <li>IOC Analysis</li>
+            <li>MITRE ATT&CK Mapping</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PROJECTS -->
+    <section class="fade">
+      <h2>Projects</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>SOC Log Analysis – Splunk</h3>
+          <ul>
+            <li>Analyzed Windows, Linux, firewall, and Apache logs</li>
+            <li>Detected abnormal authentication and access anomalies</li>
+            <li>Built SPL queries and dashboards</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Phishing Email Analysis</h3>
+          <ul>
+            <li>SPF, DKIM, DMARC validation</li>
+            <li>Malicious URL and domain investigation</li>
+            <li>IOC validation using VirusTotal & MXToolbox</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Vulnerability Assessment</h3>
+          <ul>
+            <li>Conducted Nessus scans on Windows VM</li>
+            <li>Identified exposed services & outdated software</li>
+            <li>Reviewed severity and remediation priority</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- EXPERIENCE -->
+    <section class="fade">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>SOC Analyst – Virtual Experience (LetsDefend)</h3>
+        <ul>
+          <li>Investigated security alerts using SIEM workflows</li>
+          <li>Identified true positives vs false positives</li>
+          <li>Created incident tickets and followed SOC playbooks</li>
+          <li>Exposure to EDR, SOAR, and threat intelligence</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CONTACT -->
+    <section class="fade contact">
+      <h2>Contact</h2>
+      <p>Email: harshitha@gmail.com</p>
+      <p>GitHub: harshii-cyber.github.io</p>
+      <p>LinkedIn: harshith.linkdln.com</p>
+    </section>
 
   </div>
+
+  <footer>
+    © 2026 SOC Analyst Portfolio
+  </footer>
+
 </body>
 </html>
