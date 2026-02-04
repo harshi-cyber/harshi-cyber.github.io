@@ -1,7 +1,7 @@
 
-/* =========================
-   RESET & GLOBAL
-========================= */
+/* ======================
+   RESET & BASE
+====================== */
 * {
   box-sizing: border-box;
 }
@@ -9,28 +9,14 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background-color: #f1f5f9;
+  background-color: #e5e7eb;   /* visible background */
   color: #0f172a;
   line-height: 1.6;
-
-  /* page load effect */
-  animation: fadeIn 0.8s ease-in;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =========================
+/* ======================
    HERO / HEADER
-========================= */
+====================== */
 .hero {
   background: linear-gradient(135deg, #020617, #0f172a);
   text-align: center;
@@ -42,12 +28,11 @@ body {
   font-weight: 700;
   color: #38bdf8;
   margin-bottom: 10px;
-  letter-spacing: 1px;
 }
 
 .role {
   color: #e5e7eb;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .tagline {
@@ -56,9 +41,9 @@ body {
   color: #cbd5f5;
 }
 
-/* =========================
+/* ======================
    LAYOUT
-========================= */
+====================== */
 main {
   max-width: 1000px;
   margin: auto;
@@ -69,93 +54,86 @@ section {
   margin-bottom: 60px;
 }
 
-/* =========================
-   HEADINGS
-========================= */
+/* ======================
+   SECTION HEADINGS
+====================== */
 h2 {
-  color: #2563eb;
-  border-left: 6px solid #38bdf8;
-  padding-left: 12px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1d4ed8;
   margin-bottom: 25px;
-  position: relative;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #1d4ed8;
 }
 
-/* underline animation */
-h2::after {
-  content: "";
-  position: absolute;
-  left: 12px;
-  bottom: -6px;
-  width: 0;
-  height: 3px;
-  background-color: #38bdf8;
-  transition: width 0.4s ease;
-}
-
-section:hover h2::after {
-  width: 70px;
-}
-
-/* =========================
-   CARDS (USED EVERYWHERE)
-========================= */
+/* ======================
+   CARDS (MAIN DESIGN)
+====================== */
 .card {
-  background: #ffffff;
+  background-color: #ffffff;
   padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  border-radius: 12px;
+
+  /* STRONG LOOK */
+  border-left: 8px solid #2563eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  margin-bottom: 30px;
+  transition: background-color 0.25s ease, border-left 0.25s ease;
 }
 
-/* card hover effect */
+/* VERY CLEAR HOVER EFFECT */
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(56,189,248,0.25);
-  background: linear-gradient(180deg, #ffffff, #f0f9ff);
+  background-color: #e0f2fe;
+  border-left: 8px solid #0ea5e9;
 }
 
-/* =========================
-   GRID (SKILLS)
-========================= */
+/* ======================
+   SKILLS GRID
+====================== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
-/* grid hover highlight */
-.grid .card:hover {
-  border-left: 6px solid #38bdf8;
+.grid .card {
+  text-align: center;
+  font-weight: 600;
+  background-color: #f8fafc;
 }
 
-/* =========================
+/* ======================
    PROJECTS
-========================= */
+====================== */
 .project h3 {
-  color: #1d4ed8;
-  transition: color 0.3s ease;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
 }
 
-.project:hover h3 {
-  color: #0ea5e9;
+.project p {
+  color: #374151;
 }
 
+/* TOOL BADGE */
 .badge {
   display: inline-block;
   margin-top: 10px;
-  padding: 6px 12px;
-  background-color: #e0f2fe;
-  color: #0369a1;
+  padding: 6px 14px;
+  background-color: #2563eb;
+  color: #ffffff;
   border-radius: 20px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-/* =========================
+/* ======================
    TEXT & LISTS
-========================= */
+====================== */
 p {
-  color: #374151;
+  font-size: 16px;
 }
 
 ul {
@@ -164,20 +142,18 @@ ul {
 
 li {
   margin-bottom: 10px;
-  color: #374151;
+  font-weight: 500;
 }
 
-/* =========================
+/* ======================
    LINKS
-========================= */
+====================== */
 a {
-  color: #2563eb;
+  color: #1d4ed8;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #0ea5e9;
   text-decoration: underline;
 }
