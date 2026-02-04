@@ -8,10 +8,11 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -99,20 +100,28 @@
       animation: fadeUp 1s ease forwards;
     }
 
-    .fade.delay {
-      animation-delay: 0.3s;
-    }
+    .fade.delay { animation-delay: 0.3s; }
 
     @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .contact p {
-      margin: 6px 0;
+      margin: 10px 0;
+      font-size: 16px;
     }
+
+    .contact i {
+      color: #00e5ff;
+      margin-right: 10px;
+    }
+
+    a {
+      color: #cbd5f5;
+      text-decoration: none;
+    }
+
+    a:hover { color: #00e5ff; }
 
     footer {
       text-align: center;
@@ -125,131 +134,130 @@
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- HERO -->
-    <section class="fade">
-      <h1>Entry-Level SOC Analyst</h1>
-      <p class="tagline">
-        SIEM Monitoring • Alert Triage • Incident Investigation
-      </p>
+  <!-- HERO -->
+  <section class="fade">
+    <h1>Entry-Level SOC Analyst</h1>
+    <p class="tagline">SIEM Monitoring • Alert Triage • Incident Investigation</p>
+    <p>
+      Entry-level SOC Analyst with hands-on experience in SIEM monitoring,
+      alert triage, incident investigation, log analysis, phishing detection,
+      and incident documentation. Comfortable working in a 24/7 SOC environment.
+    </p>
+  </section>
 
-      <p>
-        Entry-level SOC Analyst with hands-on experience in SIEM monitoring,
-        alert triage, incident investigation, log analysis, phishing detection,
-        and incident documentation. Comfortable working in a 24/7 SOC environment.
-      </p>
-    </section>
+  <div class="divider"></div>
 
-    <div class="divider"></div>
-
-    <!-- SKILLS -->
-    <section class="fade delay">
-      <h2>Skills</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>SOC Operations</h3>
-          <ul>
-            <li>SIEM Monitoring</li>
-            <li>Alert Triage</li>
-            <li>Incident Response</li>
-            <li>SOC Playbooks</li>
-            <li>Ticketing & Documentation</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Security Tools</h3>
-          <ul>
-            <li>Wazuh</li>
-            <li>Microsoft Sentinel</li>
-            <li>Wireshark</li>
-            <li>Nmap</li>
-            <li>Nessus</li>
-            <li>VirusTotal, MXToolbox</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Threat Detection</h3>
-          <ul>
-            <li>Log Analysis (Windows, Linux, Web)</li>
-            <li>Phishing Analysis</li>
-            <li>IOC Analysis</li>
-            <li>MITRE ATT&CK Mapping</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- PROJECTS -->
-    <section class="fade">
-      <h2>Projects</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>SOC Log Analysis – Splunk</h3>
-          <ul>
-            <li>Analyzed Windows, Linux, firewall, and Apache logs</li>
-            <li>Detected abnormal authentication and access anomalies</li>
-            <li>Built SPL queries and dashboards</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Phishing Email Analysis</h3>
-          <ul>
-            <li>SPF, DKIM, DMARC validation</li>
-            <li>Malicious URL and domain investigation</li>
-            <li>IOC validation using VirusTotal & MXToolbox</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Vulnerability Assessment</h3>
-          <ul>
-            <li>Conducted Nessus scans on Windows VM</li>
-            <li>Identified exposed services & outdated software</li>
-            <li>Reviewed severity and remediation priority</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- EXPERIENCE -->
-    <section class="fade">
-      <h2>Experience</h2>
+  <!-- SKILLS -->
+  <section class="fade delay">
+    <h2>Skills</h2>
+    <div class="cards">
       <div class="card">
-        <h3>SOC Analyst – Virtual Experience (LetsDefend)</h3>
+        <h3>SOC Operations</h3>
         <ul>
-          <li>Investigated security alerts using SIEM workflows</li>
-          <li>Identified true positives vs false positives</li>
-          <li>Created incident tickets and followed SOC playbooks</li>
-          <li>Exposure to EDR, SOAR, and threat intelligence</li>
+          <li>SIEM Monitoring</li>
+          <li>Alert Triage</li>
+          <li>Incident Response</li>
+          <li>SOC Playbooks</li>
+          <li>Ticketing & Documentation</li>
         </ul>
       </div>
-    </section>
 
-    <div class="divider"></div>
+      <div class="card">
+        <h3>Security Tools</h3>
+        <ul>
+          <li>Wazuh</li>
+          <li>Microsoft Sentinel</li>
+          <li>Wireshark</li>
+          <li>Nmap</li>
+          <li>Nessus</li>
+          <li>VirusTotal, MXToolbox</li>
+        </ul>
+      </div>
 
-    <!-- CONTACT -->
-    <section class="fade contact">
-      <h2>Contact</h2>
-      <p>Email:harshithachenna5@gmail.com</p>
-      <p>GitHub: harshi-cyber.github.io</p>
-      <p>LinkedIn:https://www.linkedin.com/in/harshitha-chenna/</p>
-    </section>
+      <div class="card">
+        <h3>Threat Detection</h3>
+        <ul>
+          <li>Log Analysis</li>
+          <li>Phishing Analysis</li>
+          <li>IOC Analysis</li>
+          <li>MITRE ATT&CK Mapping</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <div class="divider"></div>
 
-  <footer>
-    © 2026 SOC Analyst Portfolio
-  </footer>
+  <!-- PROJECTS -->
+  <section class="fade">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>SOC Log Analysis – Splunk</h3>
+        <ul>
+          <li>Analyzed Windows, Linux, firewall, and web logs</li>
+          <li>Detected abnormal authentication anomalies</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Phishing Email Analysis</h3>
+        <ul>
+          <li>SPF, DKIM, DMARC validation</li>
+          <li>IOC validation using VirusTotal</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Vulnerability Assessment</h3>
+        <ul>
+          <li>Nessus scans on Windows VM</li>
+          <li>Risk and remediation analysis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EDUCATION -->
+  <section class="fade">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>BSc (Hons) Community Science</h3>
+      <p>College of Community Science • 2024</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CERTIFICATIONS -->
+  <section class="fade">
+    <h2>Certifications</h2>
+    <div class="cards">
+      <div class="card">Google Cybersecurity Certificate</div>
+      <div class="card">Cisco – Introduction to Cybersecurity</div>
+      <div class="card">ISC2 – 5 Domains</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT -->
+  <section class="fade contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> harshithachenna01@gmail.com</p>
+    <p><i class="fab fa-github"></i> <a href="#">harshi-cyber.github.io</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="#">https://www.linkedin.com/in/harshitha-chenna/</a></p>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 SOC Analyst Portfolio
+</footer>
 
 </body>
 </html>
