@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SOC Analyst Portfolio</title>
+  <title>Harshitha | SOC Analyst Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Fonts -->
@@ -49,13 +49,13 @@
     p {
       color: #cbd5f5;
       line-height: 1.7;
-      max-width: 720px;
+      max-width: 760px;
     }
 
     .tagline {
       font-size: 18px;
       color: #9ca3af;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .divider {
@@ -106,8 +106,37 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    a {
+      color: #cbd5f5;
+      text-decoration: none;
+    }
+
+    a:hover { color: #00e5ff; }
+
+    .btns {
+      margin-top: 30px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #00e5ff;
+      color: #000;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      border: 1px solid #00e5ff;
+      color: #00e5ff;
+      padding: 12px 20px;
+      border-radius: 10px;
+    }
+
     .contact p {
-      margin: 10px 0;
+      margin: 12px 0;
       font-size: 16px;
     }
 
@@ -115,13 +144,6 @@
       color: #00e5ff;
       margin-right: 10px;
     }
-
-    a {
-      color: #cbd5f5;
-      text-decoration: none;
-    }
-
-    a:hover { color: #00e5ff; }
 
     footer {
       text-align: center;
@@ -136,21 +158,46 @@
 
 <div class="container">
 
-  <!-- HERO -->
+  <!-- HOME -->
   <section class="fade">
-    <h1>Entry-Level SOC Analyst</h1>
-    <p class="tagline">SIEM Monitoring • Alert Triage • Incident Investigation</p>
+    <h1>Hi, I’m Harshitha</h1>
+    <p class="tagline">Entry-Level SOC Analyst | Cybersecurity Analyst</p>
+
     <p>
-      Entry-level SOC Analyst with hands-on experience in SIEM monitoring,
-      alert triage, incident investigation, log analysis, phishing detection,
-      and incident documentation. Comfortable working in a 24/7 SOC environment.
+      I focus on SIEM monitoring, log analysis, and incident response.
+      Passionate about detecting threats, investigating alerts, and improving
+      security posture.
+    </p>
+
+    <div class="btns">
+      <a href="resume.pdf" class="btn-primary">Download Resume</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <section class="fade delay">
+    <h2>About Me</h2>
+    <p>
+      I’m a cybersecurity student transitioning from a non-IT background into
+      Security Operations. I’ve built a strong foundation in SOC monitoring,
+      SIEM tools, and threat analysis through hands-on labs, projects, and
+      certifications.
+    </p>
+    <p>
+      I enjoy investigating security alerts, analyzing logs, and understanding
+      attacker behavior using real-world scenarios. My goal is to start my
+      career as a SOC Analyst and grow into advanced incident response and
+      threat hunting roles.
     </p>
   </section>
 
   <div class="divider"></div>
 
   <!-- SKILLS -->
-  <section class="fade delay">
+  <section class="fade">
     <h2>Skills</h2>
     <div class="cards">
       <div class="card">
@@ -199,6 +246,7 @@
         <ul>
           <li>Analyzed Windows, Linux, firewall, and web logs</li>
           <li>Detected abnormal authentication anomalies</li>
+          <li>Built SPL queries and dashboards</li>
         </ul>
       </div>
 
@@ -206,6 +254,7 @@
         <h3>Phishing Email Analysis</h3>
         <ul>
           <li>SPF, DKIM, DMARC validation</li>
+          <li>Malicious URL and domain investigation</li>
           <li>IOC validation using VirusTotal</li>
         </ul>
       </div>
@@ -214,7 +263,7 @@
         <h3>Vulnerability Assessment</h3>
         <ul>
           <li>Nessus scans on Windows VM</li>
-          <li>Risk and remediation analysis</li>
+          <li>Severity and remediation analysis</li>
         </ul>
       </div>
     </div>
@@ -246,34 +295,23 @@
   <div class="divider"></div>
 
   <!-- CONTACT -->
-<section class="fade contact">
-  <h2>Contact</h2>
+  <section class="fade contact" id="contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i>
+      <a href="mailto:harshithachenna01@gmail.com">harshithachenna01@gmail.com</a>
+    </p>
+    <p><i class="fab fa-github"></i>
+      <a href="https://github.com/harshi-cyber" target="_blank">https://github.com/harshi-cyber</a>
+    </p>
+    <p><i class="fab fa-linkedin"></i>
+      <a href="https://harshithachenna.linkdln.com" target="_blank">harshithachenna.linkdln.com</a>
+    </p>
+  </section>
 
-  <p>
-    <i class="fas fa-envelope"></i>
-    <a href="mailto:harshithachenna01@gmail.com">
-      harshithachenna01@gmail.com
-    </a>
-  </p>
-
-  <p>
-    <i class="fab fa-github"></i>
-    <a href="https://harshii-cyber.github.io" target="_blank">
-      harshi-cyber.github.io
-    </a>
-  </p>
-
-  <p>
-    <i class="fab fa-linkedin"></i>
-    <a href="https://harshithachenna.linkdln.com" target="_blank">
-      harshithchenna.linkdln.com
-    </a>
-  </p>
-</section>
 </div>
 
 <footer>
-  © 2026 SOC Analyst Portfolio
+  © 2026 Harshitha | SOC Analyst Portfolio
 </footer>
 
 </body>
