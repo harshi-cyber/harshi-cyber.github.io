@@ -1,70 +1,68 @@
-/* FIX TEXT VISIBILITY */
-section {
-  background-color: #f8fafc;
-  color: #0f172a;
-  padding: 40px 30px;
-  border-radius: 10px;
-}
-
-section p,
-section li {
-  color: #0f172a;
-}
-
-h2 {
-  color: #2563eb;
-  border-bottom: 2px solid #2563eb;
-}
+/* ===== GLOBAL ===== */
 body {
   font-family: 'Inter', sans-serif;
-  background-color:sky blue;
-  color: #e5e7eb;
+  background-color: #e5e7eb;   /* light grey background */
+  color: #111827;              /* dark text */
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
+/* ===== HEADER ===== */
 header {
+  background: linear-gradient(135deg, #020617, #0f172a);
   text-align: center;
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #0f172a, #020617);
+  padding: 80px 20px;
 }
 
-h1 {
+header h1 {
   font-size: 42px;
   font-weight: 700;
-  color: #38bdf8;
+  color: #38bdf8;              /* cyan blue */
   margin-bottom: 10px;
 }
 
 .subtitle {
   font-size: 18px;
-  color: #cbd5f5;
+  color: #e5e7eb;
 }
 
 .summary {
-  max-width: 700px;
+  max-width: 720px;
   margin: 15px auto 0;
-  color: #94a3b8;
+  color: #cbd5f5;
 }
 
+/* ===== SECTIONS ===== */
 section {
+  background-color: #ffffff;
   max-width: 900px;
   margin: 50px auto;
-  padding: 0 20px;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
+/* ===== HEADINGS ===== */
 h2 {
   font-size: 26px;
-  color: #38bdf8;
-  border-bottom: 2px solid #1e293b;
-  padding-bottom: 6px;
+  font-weight: 600;
+  color: #1d4ed8;              /* strong blue */
+  border-bottom: 3px solid #1d4ed8;
+  padding-bottom: 8px;
   margin-bottom: 25px;
 }
 
 h3 {
   font-size: 20px;
-  color: #f8fafc;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+/* ===== TEXT ===== */
+p {
+  color: #374151;              /* dark grey */
+  font-size: 16px;
 }
 
 ul {
@@ -72,17 +70,21 @@ ul {
 }
 
 li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  color: #374151;
 }
 
+/* ===== PROJECT CARDS ===== */
 .project {
-  background-color: #020617;
-  border: 1px solid #1e293b;
-  border-radius: 10px;
+  background-color: #f8fafc;
+  border-left: 6px solid #38bdf8;
   padding: 20px;
+  border-radius: 8px;
   margin-bottom: 25px;
 }
 
+/* ===== CONTACT ===== */
 #contact p {
   margin-bottom: 10px;
+  font-weight: 500;
 }
