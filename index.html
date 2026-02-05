@@ -11,161 +11,25 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Inter, sans-serif;
-      background: radial-gradient(circle at top, #0f1c2f 0%, #0b0f1a 65%);
-      color: #e5e7eb;
-      scroll-behavior: smooth;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 24px;
-    }
-
-    h1, h2, h3 {
-      font-family: Poppins, sans-serif;
-      letter-spacing: 0.4px;
-    }
-
-    h1 {
-      font-size: 48px;
-      color: #00e5ff;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 28px;
-      color: #7c7cff;
-      margin-top: 90px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #cbd5f5;
-      line-height: 1.7;
-      max-width: 760px;
-    }
-
-    .tagline {
-      font-size: 18px;
-      color: #9ca3af;
-      margin-bottom: 30px;
-    }
-
-    .divider {
-      margin-top: 90px;
-      height: 1px;
-      background: linear-gradient(to right, transparent, #1f2937, transparent);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 30px;
-    }
-
-    .card {
-      padding: 26px;
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 30px rgba(0, 229, 255, 0.18);
-    }
-
-    ul {
-      padding-left: 20px;
-      margin: 0;
-    }
-
-    li {
-      margin-bottom: 8px;
-      color: #d1d5db;
-    }
-
-    a {
-      color: #cbd5f5;
-      text-decoration: none;
-    }
-
-    a:hover { color: #00e5ff; }
-
-    .btns {
-      margin-top: 30px;
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: #00e5ff;
-      color: #000;
-      padding: 12px 20px;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .btn-primary:hover {
-      box-shadow: 0 0 25px rgba(0,229,255,0.6);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid #00e5ff;
-      color: #00e5ff;
-      padding: 12px 20px;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-    }
-
-    .btn-outline:hover {
-      background: rgba(0,229,255,0.1);
-    }
-
-    .contact p {
-      margin: 12px 0;
-      font-size: 16px;
-    }
-
-    .contact i {
-      color: #00e5ff;
-      margin-right: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 0;
-      color: #9ca3af;
-      font-size: 14px;
-    }
-
-    /* SCROLL REVEAL */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">Harshitha</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
 <div class="container">
 
@@ -173,7 +37,6 @@
   <section class="reveal">
     <h1>Hi, I’m Harshitha</h1>
     <p class="tagline">Entry-Level SOC Analyst | Cybersecurity Analyst</p>
-
     <p>
       I focus on SIEM monitoring, log analysis, and incident response.
       Passionate about detecting threats, investigating alerts, and improving
@@ -186,11 +49,9 @@
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <!-- ABOUT -->
-  <section class="reveal">
-    <h2>About Me</h2>
+  <section class="reveal" id="about">
+    <h2 class="section-title"><i class="fas fa-user-shield"></i> About Me</h2>
     <p>
       I’m a cybersecurity student transitioning from a non-IT background into
       Security Operations. I’ve built a strong foundation in SOC monitoring,
@@ -198,18 +59,14 @@
       certifications.
     </p>
     <p>
-      I enjoy investigating security alerts, analyzing logs, and understanding
-      attacker behavior using real-world scenarios. My goal is to start my
-      career as a SOC Analyst and grow into advanced incident response and
-      threat hunting roles.
+      My goal is to start my career as a SOC Analyst and grow into advanced
+      incident response and threat hunting roles.
     </p>
   </section>
 
-  <div class="divider"></div>
-
   <!-- SKILLS -->
-  <section class="reveal">
-    <h2>Skills</h2>
+  <section class="reveal" id="skills">
+    <h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
     <div class="cards">
       <div class="card">
         <h3>SOC Operations</h3>
@@ -218,7 +75,6 @@
           <li>Alert Triage</li>
           <li>Incident Response</li>
           <li>SOC Playbooks</li>
-          <li>Ticketing & Documentation</li>
         </ul>
       </div>
 
@@ -230,7 +86,6 @@
           <li>Wireshark</li>
           <li>Nmap</li>
           <li>Nessus</li>
-          <li>VirusTotal, MXToolbox</li>
         </ul>
       </div>
 
@@ -240,84 +95,55 @@
           <li>Log Analysis</li>
           <li>Phishing Analysis</li>
           <li>IOC Analysis</li>
-          <li>MITRE ATT&CK Mapping</li>
+          <li>MITRE ATT&CK</li>
         </ul>
       </div>
     </div>
   </section>
-
-  <div class="divider"></div>
 
   <!-- PROJECTS -->
-  <section class="reveal">
-    <h2>Projects</h2>
+  <section class="reveal" id="projects">
+    <h2 class="section-title"><i class="fas fa-folder-open"></i> Projects</h2>
     <div class="cards">
-      <div class="card">
-        <h3>SOC Log Analysis – Splunk</h3>
-        <ul>
-          <li>Analyzed Windows, Linux, firewall, and web logs</li>
-          <li>Detected abnormal authentication anomalies</li>
-          <li>Built SPL queries and dashboards</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Phishing Email Analysis</h3>
-        <ul>
-          <li>SPF, DKIM, DMARC validation</li>
-          <li>Malicious URL and domain investigation</li>
-          <li>IOC validation using VirusTotal</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Vulnerability Assessment</h3>
-        <ul>
-          <li>Nessus scans on Windows VM</li>
-          <li>Severity and remediation analysis</li>
-        </ul>
-      </div>
+      <div class="card">SOC Log Analysis – Splunk</div>
+      <div class="card">Phishing Email Analysis</div>
+      <div class="card">Vulnerability Assessment</div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
- 
-
   <!-- CERTIFICATIONS -->
-<section class="reveal">
-  <h2>Certifications</h2>
-  <div class="cards">
-    <div class="card">Google Cybersecurity Certificate (2025)</div>
-    <div class="card">Cisco – Introduction to Cybersecurity (2025)</div>
-    <div class="card">ISC2 – 5 Domains (2025)</div>
-  </div>
-</section>
+  <section class="reveal">
+    <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
+    <div class="cards">
+      <div class="card">Google Cybersecurity Certificate (2025)</div>
+      <div class="card">Cisco – Introduction to Cybersecurity (2025)</div>
+      <div class="card">ISC2 – 5 Domains (2025)</div>
+    </div>
+  </section>
 
-  <div class="divider"></div>
+  <!-- LEARNING & LABS -->
+  <section class="reveal">
+    <h2 class="section-title"><i class="fas fa-flask"></i> Learning & Labs</h2>
+    <div class="card">
+      <ul>
+        <li>TryHackMe (SOC & Blue Team paths)</li>
+        <li>Hands-on SIEM use cases</li>
+        <li>Continuous learning in threat detection</li>
+      </ul>
+    </div>
+  </section>
 
-<!-- LEARNING & LABS -->
-<section class="reveal">
-  <h2>Learning & Labs</h2>
-  <div class="card">
-    <ul>
-      <li>Letsdefend (SOC & Blue Team paths)</li>
-      <li>Hands-on SIEM use cases</li>
-      <li>Continuous learning in threat detection and incident response</li>
-    </ul>
-  </div>
-</section>
   <!-- CONTACT -->
   <section class="reveal contact" id="contact">
-    <h2>Contact</h2>
+    <h2 class="section-title"><i class="fas fa-address-card"></i> Contact</h2>
     <p><i class="fas fa-envelope"></i>
-      <a href="harshithachenna01@gmail.com">harshithachenna01@gmail.com</a>
+      <a href="mailto:harshitha@gmail.com">harshitha@gmail.com</a>
     </p>
     <p><i class="fab fa-github"></i>
-      <a href="https://github.com/harshi-cyber" target="_blank">https://github.com/harshi-cyber</a>
+      <a href="https://harshii-cyber.github.io" target="_blank">GitHub</a>
     </p>
     <p><i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/harshitha-chenna/" target="_blank">https://www.linkedin.com/in/harshitha-chenna/</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
     </p>
   </section>
 
@@ -329,17 +155,13 @@
 
 <script>
   const reveals = document.querySelectorAll(".reveal");
-
   function revealOnScroll() {
-    reveals.forEach(section => {
-      const windowHeight = window.innerHeight;
-      const elementTop = section.getBoundingClientRect().top;
-      if (elementTop < windowHeight - 100) {
-        section.classList.add("active");
+    reveals.forEach(sec => {
+      if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+        sec.classList.add("active");
       }
     });
   }
-
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
 </script>
