@@ -179,18 +179,9 @@ footer {
   color: #9ca3af;
   font-size: 14px;
 }
-/* Headline text */
-.section-title span {
-  color: #00e5ff;   /* main blue */
-}
-
-/* Headline icons */
-  /* teal / aqua blue */
-}
-
-/* SAME COLOR FOR ICON + HEADING TEXT */
-.section-title,
-.section-title i,
-.section-title span {
-  color: #00e5ff; /* single blue for everything */
+/* FINAL: same color for heading text + icon */
+h2.section-title,
+h2.section-title i,
+h2.section-title span {
+  color: #00e5ff;
 }
