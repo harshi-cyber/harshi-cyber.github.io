@@ -354,6 +354,42 @@
   window.addEventListener("scroll", revealOnScroll);
   revealOnScroll();
 </script>
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(11, 15, 26, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,229,255,0.2);
+  z-index: 1000;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: Poppins, sans-serif;
+  color: #00e5ff;
+  font-weight: 600;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: #cbd5f5;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #00e5ff;
+}
 
 </body>
 </html>
