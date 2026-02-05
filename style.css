@@ -130,11 +130,26 @@ h2 {
   text-decoration: none;
 }
 
-/* CONTACT SECTION COLOR FIX */
-.contact h2,
-.contact h2 span,
-.contact h2 i {
-  color: #00e5ff;   /* main blue */
+/* CONTACT COLOR MATCH FIX */
+
+/* Contact heading + icon same blue as Learning & Labs */
+.contact .section-title,
+.contact .section-title i,
+.contact .section-title span {
+  color: #00e5ff;
+}
+
+/* Contact links in white */
+.contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Optional: subtle hover effect */
+.contact a:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
 }
 
 .contact a {
@@ -163,4 +178,13 @@ footer {
   padding: 40px 0;
   color: #9ca3af;
   font-size: 14px;
+}
+/* Headline text */
+.section-title span {
+  color: #00e5ff;   /* main blue */
+}
+
+/* Headline icons */
+.section-title i {
+  color: #22d3ee;   /* teal / aqua blue */
 }
