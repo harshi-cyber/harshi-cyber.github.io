@@ -185,3 +185,7 @@ h2.section-title i,
 h2.section-title span {
   color: #00e5ff;
 }
+/* SUBTLE GLOW FOR SECTION HEADINGS */
+h2.section-title {
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
