@@ -1,204 +1,359 @@
-/* RESET */
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Harshitha | SOC Analyst Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #0b1220;
-  color: #e5e7eb;
-  line-height: 1.6;
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
-  /* PAGE LOAD EFFECT */
-  animation: pageEnter 1s ease;
-}
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-@keyframes pageEnter {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: radial-gradient(circle at top, #0f1c2f 0%, #0b0f1a 65%);
+      color: #e5e7eb;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    h1, h2, h3 {
+      font-family: Poppins, sans-serif;
+      letter-spacing: 0.4px;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #00e5ff;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #7c7cff;
+      margin-top: 90px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #cbd5f5;
+      line-height: 1.7;
+      max-width: 760px;
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: #9ca3af;
+      margin-bottom: 30px;
+    }
+
+    .divider {
+      margin-top: 90px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #1f2937, transparent);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    /* ALWAYS GLOW CARDS */
+    .card {
+      padding: 26px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      box-shadow: 0 0 18px rgba(0, 229, 255, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 35px rgba(0, 229, 255, 0.35);
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: #d1d5db;
+    }
+
+    a {
+      color: #cbd5f5;
+      text-decoration: none;
+    }
+
+    a:hover { color: #00e5ff; }
+
+    .btns {
+      margin-top: 30px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ALWAYS GLOW BUTTON */
+    .btn-primary {
+      background: #00e5ff;
+      color: #000;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 0 18px rgba(0,229,255,0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 30px rgba(0,229,255,0.7);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #00e5ff;
+      color: #00e5ff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(0,229,255,0.1);
+    }
+
+    .contact p {
+      margin: 12px 0;
+      font-size: 16px;
+    }
+
+    .contact i {
+      color: #00e5ff;
+      margin-right: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    /* SCROLL REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HOME -->
+  <section class="reveal">
+    <h1>Hi, I’m Harshitha</h1>
+    <p class="tagline">Entry-Level SOC Analyst | Cybersecurity Analyst</p>
+    <p>
+      I focus on SIEM monitoring, log analysis, and incident response.
+      Passionate about detecting threats, investigating alerts, and improving
+      security posture.
+    </p>
+
+    <div class="btns">
+      <a href="resume.pdf" class="btn-primary">Download Resume</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <section class="reveal">
+    <h2>About Me</h2>
+    <p>
+      I’m a cybersecurity student transitioning from a non-IT background into
+      Security Operations. I’ve built a strong foundation in SOC monitoring,
+      SIEM tools, and threat analysis through hands-on labs, projects, and
+      certifications.
+    </p>
+    <p>
+      I enjoy investigating security alerts, analyzing logs, and understanding
+      attacker behavior using real-world scenarios. My goal is to start my
+      career as a SOC Analyst and grow into advanced incident response and
+      threat hunting roles.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SKILLS -->
+  <section class="reveal">
+    <h2>Skills</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>SOC Operations</h3>
+        <ul>
+          <li>SIEM Monitoring</li>
+          <li>Alert Triage</li>
+          <li>Incident Response</li>
+          <li>SOC Playbooks</li>
+          <li>Ticketing & Documentation</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Security Tools</h3>
+        <ul>
+          <li>Wazuh</li>
+          <li>Microsoft Sentinel</li>
+          <li>Wireshark</li>
+          <li>Nmap</li>
+          <li>Nessus</li>
+          <li>VirusTotal, MXToolbox</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Threat Detection</h3>
+        <ul>
+          <li>Log Analysis</li>
+          <li>Phishing Analysis</li>
+          <li>IOC Analysis</li>
+          <li>MITRE ATT&CK Mapping</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <section class="reveal">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>SOC Log Analysis – Splunk</h3>
+        <ul>
+          <li>Analyzed Windows, Linux, firewall, and web logs</li>
+          <li>Detected abnormal authentication anomalies</li>
+          <li>Built SPL queries and dashboards</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Phishing Email Analysis</h3>
+        <ul>
+          <li>SPF, DKIM, DMARC validation</li>
+          <li>Malicious URL and domain investigation</li>
+          <li>IOC validation using VirusTotal</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Vulnerability Assessment</h3>
+        <ul>
+          <li>Nessus scans on Windows VM</li>
+          <li>Severity and remediation analysis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EDUCATION -->
+  <section class="reveal">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>BSc (Hons) Community Science</h3>
+      <p>College of Community Science • 2024</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CERTIFICATIONS -->
+  <section class="reveal">
+    <h2>Certifications</h2>
+    <div class="cards">
+      <div class="card">Google Cybersecurity Certificate (2025)</div>
+      <div class="card">Cisco – Introduction to Cybersecurity (2025)</div>
+      <div class="card">ISC2 – 5 Domains (2025)</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- LEARNING & LABS -->
+  <section class="reveal">
+    <h2>Learning & Labs</h2>
+    <div class="card">
+      <ul>
+        <li>TryHackMe (SOC & Blue Team paths)</li>
+        <li>Hands-on SIEM use cases</li>
+        <li>Continuous learning in threat detection and incident response</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT -->
+  <section class="reveal contact" id="contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i>
+      <a href="mailto:harshitha@gmail.com">harshitha@gmail.com</a>
+    </p>
+    <p><i class="fab fa-github"></i>
+      <a href="https://harshii-cyber.github.io" target="_blank">harshii-cyber.github.io</a>
+    </p>
+    <p><i class="fab fa-linkedin"></i>
+      <a href="https://harshith.linkdln.com" target="_blank">harshith.linkdln.com</a>
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 Harshitha | SOC Analyst Portfolio
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+  function revealOnScroll() {
+    reveals.forEach(section => {
+      if (section.getBoundingClientRect().top < window.innerHeight - 100) {
+        section.classList.add("active");
+      }
+    });
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
 
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, #020617, #020617);
-  padding: 90px 20px;
-  text-align: center;
-  border-bottom: 4px solid #2563eb;
-
-  /* HERO GLOW */
-  box-shadow: 0 10px 40px rgba(37,99,235,0.4);
-}
-
-.hero h1 {
-  font-size: 42px;
-  color: #38bdf8;
-  margin-bottom: 10px;
-
-  /* TEXT ANIMATION */
-  animation: glowText 2s infinite alternate;
-}
-
-@keyframes glowText {
-  from {
-    text-shadow: 0 0 5px #38bdf8;
-  }
-  to {
-    text-shadow: 0 0 20px #38bdf8;
-  }
-}
-
-.role {
-  color: #c7d2fe;
-  font-weight: 600;
-}
-
-.tagline {
-  max-width: 780px;
-  margin: 12px auto 0;
-  color: #94a3b8;
-}
-
-/* MAIN */
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-/* SECTION HEADINGS */
-h2 {
-  color: #38bdf8;
-  font-size: 26px;
-  margin-bottom: 25px;
-  padding-left: 12px;
-  border-left: 6px solid #2563eb;
-  position: relative;
-}
-
-/* ANIMATED UNDERLINE */
-h2::after {
-  content: "";
-  position: absolute;
-  left: 12px;
-  bottom: -8px;
-  width: 60px;
-  height: 3px;
-  background: #38bdf8;
-  animation: pulseLine 1.5s infinite;
-}
-
-@keyframes pulseLine {
-  0% { opacity: 0.4; }
-  50% { opacity: 1; }
-  100% { opacity: 0.4; }
-}
-
-/* CARD */
-.card {
-  background-color: #111827;
-  padding: 25px;
-  border-radius: 12px;
-  border-left: 8px solid #2563eb;
-  margin-bottom: 30px;
-
-  /* STRONG EFFECT */
-  transition: all 0.3s ease;
-}
-
-/* VERY OBVIOUS HOVER */
-.card:hover {
-  transform: scale(1.03);
-  background-color: #0f172a;
-  border-left: 8px solid #38bdf8;
-  box-shadow: 0 0 30px rgba(56,189,248,0.6);
-}
-
-/* SKILLS GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.grid .card {
-  text-align: center;
-  font-weight: 600;
-  background-color: #020617;
-}
-
-/* PROJECTS */
-.project h3 {
-  color: #60a5fa;
-  margin-bottom: 8px;
-}
-
-/* BADGE */
-.badge {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 6px 16px;
-  background: linear-gradient(135deg, #2563eb, #38bdf8);
-  color: #ffffff;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 700;
-
-  /* BADGE PULSE */
-  animation: badgePulse 1.8s infinite;
-}
-
-@keyframes badgePulse {
-  0% { box-shadow: 0 0 0 rgba(56,189,248,0.4); }
-  70% { box-shadow: 0 0 15px rgba(56,189,248,0.8); }
-  100% { box-shadow: 0 0 0 rgba(56,189,248,0.4); }
-}
-
-/* LIST */
-ul {
-  padding-left: 18px;
-}
-
-li {
-  margin-bottom: 8px;
-  color: #cbd5f5;
-}
-
-/* LINKS */
-a {
-  color: #38bdf8;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-/* =========================
-   SCROLL-LIKE REVEAL ANIMATION
-========================= */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: revealAnim 0.9s ease forwards;
-}
-
-/* Stagger effect */
-.reveal:nth-child(1) { animation-delay: 0.1s; }
-.reveal:nth-child(2) { animation-delay: 0.2s; }
-.reveal:nth-child(3) { animation-delay: 0.3s; }
-.reveal:nth-child(4) { animation-delay: 0.4s; }
-
-@keyframes revealAnim {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+</body>
+</html>
