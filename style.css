@@ -291,3 +291,14 @@ h2.section-title {
   transform: translateY(-2px);
   box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
 }
+/* SLIDE-IN EFFECT ON SCROLL */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
