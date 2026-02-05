@@ -130,10 +130,20 @@ h2 {
   text-decoration: none;
 }
 
-/* CONTACT */
-.contact i {
+/* CONTACT SECTION COLOR FIX */
+.contact h2,
+.contact h2 span,
+.contact h2 i {
+  color: #00e5ff;   /* main blue */
+}
+
+.contact a {
   color: #00e5ff;
-  margin-right: 8px;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
 }
 
 /* SCROLL ANIMATION */
